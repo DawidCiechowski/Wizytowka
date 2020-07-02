@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-me {
+    display: flex;
+    justify-content: space-evenly;
+    background: #060c29;
+    color: white;
+    border: none;
+    padding: 20px;
+    margin: 20px;
+    align-items: center;
+    width: 100vh;
+    height: 400px;
+    margin-left: 70%;
+    transform: translate(-50%, 15%);
+    flex-direction: column;
+    border-radius: 25px;
+}
+
+.about-me h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .about-me {
+        display: none;
+    }
+}
