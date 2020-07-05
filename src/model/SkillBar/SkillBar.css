@@ -4,51 +4,26 @@
     box-sizing: border-box;
 }
 
-/* .container {
-    width: 30%;
-    background-color: #ddd;
-}
-
-.skills {
-    text-align: right;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color:white;
-    
-}
-
-
-.java {
-    width: 90%;
-    background-color: red;
-}
-
-.python {
-    width: 70%;
-    background-color: blue;
-}
-
-.skillbar {
-    transform: translate(1%, -250%);
-    color: white;
-} */
-
 body {
     font-family: Roboto;
 }
 
+/* SkillBar Section */
+
 .skillbar {
-    width: 500px;
+    width: 25%;
     padding: 20px;
-    transform: translate(10px, -100%);
+    transform: translate(10%, -130%);
     color: white;
     background-color: #060c29;
     border-radius: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     align-items: center;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, .05),
+                inset 0 -15px 15px rgba(255, 255, 255, .05),
+                0 15px 15px rgba(0, 0, 0, .05),
+                inset 0 15px 15px rgba(0, 0, 0, .05)
 }
-
-
 
 .skillbar-li {
     position: relative;
@@ -65,7 +40,7 @@ body {
     left: 0;
     width: 100%;
     height: 15px;
-    background-color: rgba(220, 130, 22, .5);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 1000px;
 }
 
@@ -76,13 +51,16 @@ body {
     left: 0;
     width: 0;
     height: 15px;
-    background-color: rgb(28, 100, 88);
+    background-color: rgb(224, 248, 9);
     border-radius: 1000px;
     animation-duration: .7s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
 
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* Skill Bars Fill-Up animation section */
 .skillbar-li.java:after {
     animation-name: java;
 }
@@ -113,3 +91,67 @@ li.csharp:after {
         width: 30%;
     }
 }
+
+li.html:after {
+    animation-name: html;
+}
+
+@keyframes html {
+    to {
+        width: 60%;
+    }
+}
+
+li.css:after {
+    animation-name: css;
+}
+
+@keyframes css {
+    to {
+        width: 45%;
+    }
+}
+
+li.react:after {
+    animation-name: react;
+}
+
+@keyframes react {
+    to {
+        width: 50%;
+    }
+}
+
+li.springboot:after {
+    animation-name: springboot;
+}
+
+@keyframes springboot {
+    to {
+        width: 60%;
+    }
+}
+
+li.flutter:after {
+    animation-name: flutter;
+}
+
+@keyframes flutter {
+    to {
+        width: 30%;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+
+/* Object Resolution Section */
+
+@media screen and (max-width: 1200px) {
+    .skillbar {
+        width: 50%;
+        transform: translate(50%, 40%);
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */

@@ -4,14 +4,25 @@
     box-sizing: border-box;
 }
 
-body{
-    background: linear-gradient(#060c29, #a3a6a8);
-    height: 100vh;
-    /*margin-top: -20px;*/
-    margin-top: -20px;
-}
-
 .app {
     display: inline-block;
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .app {
+        display: none; 
+    }
+
+}
+
+html {
+    height: auto;
+    background: linear-gradient(#060c29, #a3a6a8) no-repeat center fixed;
+}
+
+body {
+    height: auto;
+    background-attachment: fixed;
+    background-size: cover;
 }

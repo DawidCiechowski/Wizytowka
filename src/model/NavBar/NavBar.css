@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: #060c29;
+}
+
+/* ---LOGO---*/
+.logo {
+    margin-left: 40px;
+}
+
+.logo-link {
+    font-family: 'MuseoModerno', cursive;
+    font-size: xx-large;
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    list-style: none;
+    letter-spacing: 2px;
+}
+
+/* ---NAV-LINKS---*/
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 40%;
+    align-items: center;
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.link-style {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.link-style:hover {
+    animation: link-animation 0.5s forwards;
+
+}
+
+
+@keyframes link-animation {
+    from{
+        font-size: 16px;
+    }
+    to {
+        font-size: 20px;
+        font-weight: bolder;
+    }
+}
+
+
+/* ---BURGER---*/
+
+.hamburger {
+    display: none;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px
+}
+@media screen and (max-width: 768px) {
+
+   
+}

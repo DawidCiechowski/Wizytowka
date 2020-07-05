@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import App from './model/App'; 
-import NavBar from './model/NavBar'
 //import App from './tutorial/App';
 // import App from './tutorial_redux/App';
 // import {createStore} from 'redux';
@@ -16,7 +15,6 @@ import NavBar from './model/NavBar'
 
 ReactDOM.render(
   <React.StrictMode>
-    <NavBar />
     <App />
   </React.StrictMode>,
   document.getElementById('root')

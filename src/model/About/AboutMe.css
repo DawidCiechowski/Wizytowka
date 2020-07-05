@@ -4,21 +4,33 @@
     box-sizing: border-box;
 }
 
+/* Word emphasis*/
+
+.word-style {
+    color: rgb(224, 248, 9);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Biography Section */
+
 .about-me {
     display: flex;
     justify-content: space-evenly;
     background: #060c29;
     color: white;
-    border: none;
     padding: 20px;
-    margin: 20px;
     align-items: center;
-    width: 100vh;
-    height: 400px;
+    width: 40%;
+    height: 250px;
     margin-left: 70%;
-    transform: translate(-50%, 15%);
+    transform: translate(-30%, 30%);
     flex-direction: column;
     border-radius: 25px;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, .05),
+                inset 0 -15px 15px rgba(255, 255, 255, .05),
+                0 15px 15px rgba(0, 0, 0, .05),
+                inset 0 15px 15px rgba(0, 0, 0, .05)
 }
 
 .about-me h1 {
@@ -26,8 +38,125 @@
     align-items: center;
 }
 
+
+/* Education Section */
+
+.education {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 40%;
+    height: 255px;
+    color: white;
+    align-items: center;
+    margin-left: 60%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    border-radius: 25px;
+    background-color: #060c29;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, .05),
+                inset 0 -15px 15px rgba(255, 255, 255, .05),
+                0 15px 15px rgba(0, 0, 0, .05),
+                inset 0 15px 15px rgba(0, 0, 0, .05);
+}
+
+.education h1 {
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+
+/* Programming Section */
+
+.programming {
+    display: flex;
+    justify-content: space-evenly;
+    background: #060c29;
+    color: white;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    height: 315;
+    margin-left: 70%;
+    transform: translate(-30%, 70%);
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, .05),
+                inset 0 -15px 15px rgba(255, 255, 255, .05),
+                0 15px 15px rgba(0, 0, 0, .05),
+                inset 0 15px 15px rgba(0, 0, 0, .05)
+}
+
+.programming h1 {
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* Projects Section */
+
+.projects {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 40%;
+    height: 255px;
+    color: white;
+    align-items: center;
+    margin-left: 60%;
+    transform: translate(-50%, 90%);
+    text-align: center;
+    border-radius: 25px;
+    background-color: #060c29;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, .05),
+                inset 0 -15px 15px rgba(255, 255, 255, .05),
+                0 15px 15px rgba(0, 0, 0, .05),
+                inset 0 15px 15px rgba(0, 0, 0, .05);
+}
+
+.projects h1 {
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* Object Resolution Section */
 @media screen and (max-width: 768px) {
     .about-me {
         display: none;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .about-me {
+        width: 50%;
+        height: 600px;
+        transform: translate(-90%, 10%);
+    }
+
+    .education {
+        width: 50%;
+        height: 500px;
+        transform: translate(-70%, 20%);
+    }
+
+    .programming {
+        width: 50%;
+        height: 500px;
+        transform: translate(-90%, 30%);
+    }
+
+    .projects {
+        width: 50%;
+        height: 500px;
+        transform: translate(-70%, 40%);
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+

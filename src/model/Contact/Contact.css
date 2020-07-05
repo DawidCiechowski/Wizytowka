@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.box {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 25px;
+    width: 100vh;
+    height: 50vh;
+    background-color: #060c29;
+}
+
+.box h1 {
+    color: white;
+    font-weight: bold;
+}
+
+.box h3 {
+    color: white;
+    font-weight: bold;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 10px;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip a:hover {
+    animation: contact-link-animation .7s forwards;
+}
+
+@keyframes contact-link-animation{
+    to {
+        font-size: 23px;
+        font-weight: bolder;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .box {
+        display: none;
+    }
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-links img {
+    height: 30px;
+    width: 30px;
+    border-radius: 5px; 
+}
