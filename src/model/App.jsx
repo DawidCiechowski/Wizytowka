@@ -7,7 +7,7 @@ import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import NavBar from './NavBar/NavBar';
 import ProjectDescription from './Projects/ProjectDescription';
-// import Footer from './Footer/Footer';
+import Footer from './Footer/Footer';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
                 <Route path="/contact" exact component={Contact}/>
                 <Route path="/projects/:id" component={ProjectDescription}/>
             </Switch>
-            {/* <Footer /> */}
+            <Footer />
         </Router>   
     );
 }
