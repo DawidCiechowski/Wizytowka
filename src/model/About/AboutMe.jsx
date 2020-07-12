@@ -85,7 +85,7 @@ function AboutMeProjects() {
         history.push("/projects");
     }
     return (
-        <div className="projects">
+        <div className="projects-aboutme">
             <h1>Projects</h1>
             <div>
                 <p>Projects</p>

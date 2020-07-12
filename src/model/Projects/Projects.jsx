@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ProjectIcon from './ProjectIcon';
+import ProjectCard from './ProjectCard';
+import './Projects.css';
 
 
 const Projects = () => {
@@ -18,49 +19,23 @@ const Projects = () => {
     }, []);
 
 
-    return (
-        <div>
-            <CheckProjects projects={projects} />
-        </div>
-    );
-}
-
-function CheckProjects(props) {
-    const projects = props.projects;
-
     if (typeof (projects._embedded) === 'undefined' || typeof (projects._embedded) === 'null') {
-        return <h1>empty</h1>;
+        return null;//<h1 style={{color:"white"}}>Loading...</h1>;
     } else {
-        console.log(projects._embedded)
-        console.log(projects._embedded.projectList[0].id);
         return (
-            <div>
+            <section className="projects">
                 {projects._embedded.projectList.map(project => (
-                    <ProjectZ key={project.id} name={project.name} intro={project.introduction} description={project.description}
-                    technologies={project.technologies} link={project.link} />
+                    <ProjectCard
+                        key={project.id}
+                        id = {project.id}
+                        title={project.name}
+                        intro={project.introduction}
+                        technologies={project.technologies}
+                    />
                 ))}
-            </div>
+            </section>
         )
     }
-}
-
-const ProjectZ = ({name, intro, description, technologies, link }) => {
-    const stylez = {
-        
-    }
-    return (
-        <div style={{color:"white"}}>
-            <h1>Nazwa:{name}</h1>
-
-            <h1>Intro: {intro}</h1>
-            <h1>Opis: {description}</h1>
-            <h1>Technologie: <span style={{fontSize: "20px"}}>{technologies.map(tech => (
-                <p>{tech}</p>
-            ))}</span></h1>
-            <h1>Link: {link}</h1>
-            <br />
-        </div>
-    )
 }
 
 export default Projects;

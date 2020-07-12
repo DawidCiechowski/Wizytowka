@@ -1,7 +1,92 @@
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
- 
+
+ .project-card-section {
+     min-height: 90vh;
+     display: grid;
+     grid-template-columns: 5% 1fr 1fr 1fr 5%;
+ }
+
+
+ /* ----------------------------------------PHOTO---------------------------------------- */
+ .photo {
+     overflow: hidden;
+     height: 500px;
+     align-self: center;
+     justify-self: center;
+ }
+
+ .photo img {
+     width: 150px;
+     height: 250px;
+     transition: transform 0.3s ease-out;
+     cursor: pointer;
+ }
+
+ .top-left {
+     transform: translate(40%, -10%);
+ }
+
+ .top-right {
+     transform: translate(60%, -10%);
+ }
+
+ .photo:hover .top-right {
+     transform: translate(50%, 0%);
+ }
+
+ .photo:hover .top-left {
+     transform: translate(50%, 0%);
+ }
+
+ .bottom-left {
+    transform: translate(-160%, 110%);
+}
+
+.photo:hover .bottom-left {
+    transform: translate(-150%, 100%);
+}
+
+.bottom-right {
+    transform: translate(160%, 8%);
+}
+
+.photo:hover .bottom-right {
+    transform: translate(150%, -1.5%);
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+/* --------------------------------------===DETAILS----------------------------------------------- */
+
+ .details {
+     color: white;
+     grid-column: 2/3;
+     align-self: center;
+     font-family: 'PT Sans', sans-serif;
+ }
+
+ .details h1 {
+     font-size: 48px;
+ }
+
+ .details h2 {
+     font-size: 36px;
+     padding: 20px 0px;
+ }
+
+ .details p {
+     font-size: 18px;
+     padding: 10px 0px 20px 0px;
+ }
+
+ .details ul {
+     font-size: 18px;
+     padding: 20px 0px 50px 20px;
+ }
+
+/* ----------------------------------------------------------------------------------------------- */

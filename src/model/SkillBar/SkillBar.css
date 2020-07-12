@@ -15,6 +15,7 @@ body {
     padding: 20px;
     transform: translate(10%, -130%);
     color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
     background-color: #060c29;
     border-radius: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

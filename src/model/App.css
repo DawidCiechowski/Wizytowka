@@ -18,7 +18,7 @@
 
 html {
     height: auto;
-    background: linear-gradient(#060c29, #a3a6a8) no-repeat center fixed;
+    background: radial-gradient(rgba(43, 55, 96, 1), rgba(11, 16, 35, 1)) no-repeat center fixed;
 }
 
 body {

@@ -99,7 +99,7 @@
 
 /* Projects Section */
 
-.projects {
+.projects-aboutme {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -151,7 +151,7 @@
         transform: translate(-90%, 30%);
     }
 
-    .projects {
+    .projects-aboutme {
         width: 50%;
         height: 500px;
         transform: translate(-70%, 40%);
