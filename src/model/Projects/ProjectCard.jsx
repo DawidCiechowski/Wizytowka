@@ -4,11 +4,11 @@ import TopLeft from './top-left.png';
 import TopRight from './top-right.png';
 import BottomLeft from './bottom-left.png';
 import BottomRight from './bottom-right.png';
-import {useHistory} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import ProjectDescription from './ProjectDescription';
 
 function ProjectCard({ id, title, intro, technologies }) {
 
-    const history = useHistory();
 
     return (
         <section className="project-card-section">
@@ -23,12 +23,14 @@ function ProjectCard({ id, title, intro, technologies }) {
                     ))}
                 </ul>
             </div>
-            <div className="photo" onClick={() => history.push('/projects/' + id)}>
-                <img src={TopLeft} alt="model" className="top-left" />
-                <img src={TopRight} alt="model" className="top-right" />
-                <img src={BottomLeft} alt="model" className="bottom-left" />
-                <img src={BottomRight} alt="model" className="bottom-right" />
-            </div>
+            <Link to={'/projects/' + id} className="photo-link">
+                <div className="photo">
+                    <img src={TopLeft} alt="model" className="top-left" />
+                    <img src={TopRight} alt="model" className="top-right" />
+                    <img src={BottomLeft} alt="model" className="bottom-left" />
+                    <img src={BottomRight} alt="model" className="bottom-right" />
+                </div>
+            </Link>
         </section>
     );
 }

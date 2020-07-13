@@ -13,18 +13,26 @@
 
 
  /* ----------------------------------------PHOTO---------------------------------------- */
- .photo {
+
+ .photo-link {
+    overflow: hidden;
+    height: 500px;
+    align-self: center;
+    justify-self: center;
+ }
+ /* .photo {
      overflow: hidden;
      height: 500px;
      align-self: center;
      justify-self: center;
- }
+ } */
 
  .photo img {
      width: 150px;
      height: 250px;
      transition: transform 0.3s ease-out;
      cursor: pointer;
+     filter: blur(2px);
  }
 
  .top-left {
@@ -37,10 +45,12 @@
 
  .photo:hover .top-right {
      transform: translate(50%, 0%);
+     filter: blur(0);
  }
 
  .photo:hover .top-left {
      transform: translate(50%, 0%);
+     filter: blur(0);
  }
 
  .bottom-left {
@@ -49,6 +59,7 @@
 
 .photo:hover .bottom-left {
     transform: translate(-150%, 100%);
+    filter: blur(0);
 }
 
 .bottom-right {
@@ -57,6 +68,7 @@
 
 .photo:hover .bottom-right {
     transform: translate(150%, -1.5%);
+    filter: blur(0);
 }
 
 /* ----------------------------------------------------------------------------------------------- */
