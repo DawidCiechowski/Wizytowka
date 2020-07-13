@@ -7,35 +7,33 @@ import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import NavBar from './NavBar/NavBar';
 import ProjectDescription from './Projects/ProjectDescription';
-import Footer from './Footer/Footer';
-
 
 function App() {
     return (
         <Router>
             <NavBar />
-            <main>
-                <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/projects" exact component={(Projects)} />
-                    <Route path="/contact" exact component={Contact} />
-                    <Route path="/projects/:id" component={ProjectDescription} />
-                </Switch>
-            </main>
+                <main>
+                    <Switch>
+                        <Route path="/" exact component={Home} />
+                        <Route path="/projects" exact component={(Projects)} />
+                        <Route path="/contact" exact component={Contact} />
+                        <Route path="/projects/:id" component={ProjectDescription} />
+                    </Switch>
+                </main>
         </Router>
     );
 }
 
 const Home = () => {
     return (
-        <div className="app">
-            <div>
-                <AboutMe />
+            <div className="app">
+                <div>
+                    <AboutMe />
+                </div>
+                <div>
+                    <SkillBar />
+                </div>
             </div>
-            <div>
-                <SkillBar />
-            </div>
-        </div>
     );
 }
 

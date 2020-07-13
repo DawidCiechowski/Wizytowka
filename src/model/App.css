@@ -9,12 +9,6 @@
     width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-    .app {
-        display: none; 
-    }
-
-}
 
 html {
     height: auto;

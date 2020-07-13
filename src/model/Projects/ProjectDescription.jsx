@@ -1,56 +1,56 @@
 import React, { useState, useEffect } from 'react';
 import Banner from './banner.jpg';
 import './ProjectDescription.css';
+import Projects from './Projects';
 
 
 const ProjectDescription = ({ match }) => {
 
-    console.log(match.params.id)
+    const [project, setProject] = useState({});
+    const request = "http://dawid-ciechowski.eu-west-2.elasticbeanstalk.com/api/v1/projects/" + match.params.id;
+    const getProject = async () => {
+        const response = await fetch(request);
+        const data = await response.json();
+        setProject(data);
+    }
 
-    return (
-        <section>
-            <div className="banner">
-                <img src={Banner} alt="banner" />
-                <div className="project-tag">
-                    <h1>PROJECT NAME</h1>
+    useEffect(() => {
+        getProject();
+    }, []);
+
+
+    if (typeof(project.technologies) === 'undefined' || typeof(project.technologies) === 'null') {
+        return null;//<h1 style={{color:"white"}}>Loading...</h1>;
+    } else {
+        return (
+            <section>
+                <div className="banner">
+                    <img src={Banner} alt="banner" />
+                    <div className="project-tag">
+                        <h1>{project.name}</h1>
+                        <div className="project-description-technologies">
+                            {project.technologies.map(technology => (
+                                <h2>{technology}</h2>
+                            ))}
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className="project-introduction">
-                <div className="introduction">
-                    <h3>Introduction</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                <div className="project-introduction">
+                    <div className="introduction">
+                        <h3>Introduction</h3>
+
+                        <p>{project.introduction}</p>
+                    </div>
                 </div>
-            </div>
-            <div className="project-description">
-                <div className="description">
-                    <h3>Project Description</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <div className="project-description">
+                    <div className="description">
+                        <h3>Project Description</h3>
+                        <p>{project.description}</p>
+                    </div>
                 </div>
-            </div>
-        </section >
-    );
+            </section >
+        );
+    }
 }
 
 export default ProjectDescription;

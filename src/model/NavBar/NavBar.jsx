@@ -5,6 +5,26 @@ import { Link } from 'react-router-dom';
 function NavBar() {
 
 
+    const [open, setOpen] = useState(false);
+    
+    const DropdownMenu = () => {
+        return (
+            <div className="dropdown">
+                <Link onClick={() => setOpen(!open)} className="link-style" to='/'>
+                    <li>About</li>
+                </Link>
+    
+                <Link onClick={() => setOpen(!open)} className="link-style" to='/projects'>
+                    <li>Projects</li>
+                </Link>
+    
+                <Link onClick={() => setOpen(!open)} className="link-style" to='/contact'>
+                    <li>Contact</li>
+                </Link>
+            </div>
+        )
+    }
+
     return (
         <nav>
             <div className="logo">
@@ -23,13 +43,22 @@ function NavBar() {
                     <li>Contact</li>
                 </Link>
             </ul>
-            <div className="hamburger">
+            <div className="hamburger" onClick={() => setOpen(!open)}>
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
+
+            {open && <DropdownMenu />}
         </nav>
     )
 }
+
+
+
+
+
+
+
 
 export default NavBar;

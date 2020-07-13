@@ -24,15 +24,18 @@ const Projects = () => {
     } else {
         return (
             <section className="projects">
-                {projects._embedded.projectList.map(project => (
-                    <ProjectCard
-                        key={project.id}
-                        id = {project.id}
-                        title={project.name}
-                        intro={project.introduction}
-                        technologies={project.technologies}
-                    />
-                ))}
+                {projects._embedded.projectList.map((project, index) => {
+
+                    console.log(index);
+                    return(
+                        <ProjectCard
+                            key={project.id}
+                            id={project.id}
+                            title={project.name}
+                            intro={project.introduction}
+                            technologies={project.technologies}
+                        />
+                )})}
             </section>
         )
     }

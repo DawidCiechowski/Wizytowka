@@ -11,7 +11,7 @@ function ProjectCard({ id, title, intro, technologies }) {
 
 
     return (
-        <section className="project-card-section">
+        <div className="project-card-section">
             <div className="details">
                 <h1>{title}</h1>
                 <h2>Introduction:</h2>
@@ -31,7 +31,7 @@ function ProjectCard({ id, title, intro, technologies }) {
                     <img src={BottomRight} alt="model" className="bottom-right" />
                 </div>
             </Link>
-        </section>
+        </div>
     );
 }
 
