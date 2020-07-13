@@ -134,9 +134,21 @@
 
 @media screen and (max-width: 1200px) {
     .about-me {
-        width: 50%;
+        width: 50vw;
         height: 600px;
         transform: translate(-90%, 10%);
+    }
+
+    .about-me h1 {
+        font-size: 24px;
+    }
+
+    .about-me p {
+        font-size: 14px;
+    }
+
+    .about-me h3 {
+        font-size: 20px;
     }
 
     .education {
