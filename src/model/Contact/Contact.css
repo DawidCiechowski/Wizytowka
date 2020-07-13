@@ -70,12 +70,12 @@
 
 
 .contact-links {
-    display: flex;
     height: 110%;
-    justify-content: space-around;
     border-style: solid;
     border-color: white;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -88,30 +88,28 @@
 }
 
 .contact-links a {
-    margin-left: -60%;
     margin-top: 3%;
 }
 
 .phone {
     margin-top: 3%;
-    margin-left: -50%;
     color: white;
 }
 
 .email {
-    margin-left: -15%;
     margin-top: 3%;
     color: white;
 }
 
 .contact-fields {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     border-style: solid;
     border-color: white;
     border-radius: 20px;
     width: 50%;
     height: 13%;
+    align-items: center;
 }
 
 .contact-fields img {
