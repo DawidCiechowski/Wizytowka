@@ -19,6 +19,7 @@ const Projects = () => {
     }, []);
 
 
+    /* If call is empty return null otherwise return projects */
     if (typeof (projects._embedded) === 'undefined' || typeof (projects._embedded) === 'null') {
         return null;//<h1 style={{color:"white"}}>Loading...</h1>;
     } else {
