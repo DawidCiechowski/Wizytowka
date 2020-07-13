@@ -85,21 +85,16 @@
     background-color: white;
     border-radius: 15px;
     margin-top: 2%;
+    margin-right: 10px;
 }
 
 .contact-links a {
     margin-top: 3%;
+    
 }
 
-.phone {
-    margin-top: 3%;
-    color: white;
-}
 
-.email {
-    margin-top: 3%;
-    color: white;
-}
+
 
 .contact-fields {
     display: flex;
@@ -110,6 +105,7 @@
     width: 50%;
     height: 13%;
     align-items: center;
+    color: white;
 }
 
 .contact-fields img {
@@ -118,4 +114,9 @@
     background-color: white;
     border-radius: 15px;
     margin-top: 2%;
+    margin-right: 10px;
+}
+
+.contact-fields h3 {
+    margin-top: 1%;
 }
