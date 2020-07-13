@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Banner from './banner.jpg';
 import './ProjectDescription.css';
-import Projects from './Projects';
 
 
 const ProjectDescription = ({ match }) => {
