@@ -58,25 +58,25 @@ subroutes of the website. Furthermore, the website connects to personally develo
 ## Updates
 
 * 30/06/2020
-    ** Initial commit
-    ** Created initial outlook for home, project and contact pages
-    ** Added routing
+    * Initial commit
+    * Created initial outlook for home, project and contact pages
+    * Added routing
 
 * 10/07/2020
-    ** Added various styling methods to all the sub-pages
-    ** Added animations
-    ** Reworked home page
+    * Added various styling methods to all the sub-pages
+    * Added animations
+    * Reworked home page
 
 * 11/07/2020
-    ** Reworked projects page
-    ** Created sub-routing for each individual project
-    ** Created project description sub-page
-    ** Connected to external API, hosted on GitHub
+    * Reworked projects page
+    * Created sub-routing for each individual project
+    * Created project description sub-page
+    * Connected to external API, hosted on GitHub
 
 * 12/07/2020
-    ** Updated views on most of viewports
-    ** Reworked project description page
-    ** Updated Contact page style
+    * Updated views on most of viewports
+    * Reworked project description page
+    * Updated Contact page style
 
 <a name="todo"><a>
 ## TODO
@@ -84,3 +84,4 @@ subroutes of the website. Furthermore, the website connects to personally develo
 - Make website more responsive and fit on any type of screen.
 - Remove the unnecessary animations on phone sized viewports
 - Update the States and Effects to be more coherent and invoke them once. 
+- Add routing animations
