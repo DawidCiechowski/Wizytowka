@@ -16,6 +16,12 @@
 A personal website, using Node.js, React.js and CSS, showcasing the information in regards to myself - Dawid Ciechowski - along
 with information about my projects, skills and contact information. 
 
+### IMPORTANT!
+
+Although the website may be online, during this time, the project is still in development stage, and many changes may occur.
+Please do not consider this as a final product, as changes will be made regularly to update the look, functionality and other
+aspects of the website.
+
 
 <a name="tech"></a>
 ## Technologies
