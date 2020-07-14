@@ -25,8 +25,25 @@ with information about my projects, skills and contact information.
 - Node.js
 
 
-<a name-"showcase></a>
+<a name="showcase"></a>
 ## Showcase
+
+### Version 1.0 Home page
+
+![alt text](https://github.com/DawidCiechowski/Wizytowka/blob/master/imgs/2020-07-12%20(5).png)
+
+### Version 1.0 Projects page (No API conected yet) + animation
+
+![alt text](https://github.com/DawidCiechowski/Wizytowka/blob/master/imgs/2020-07-12%20(6).png)
+![alt text](https://github.com/DawidCiechowski/Wizytowka/blob/master/imgs/2020-07-12%20(7).png)
+
+### Version 1.0 Contact page
+
+![alt text](https://github.com/DawidCiechowski/Wizytowka/blob/master/imgs/2020-07-12%20(8).png)
+
+### Reworked Project Description (No API connected)
+
+![alt text](https://github.com/DawidCiechowski/Wizytowka/blob/master/imgs/2020-07-13%20(2).png)
 
 <a name="about"></a>
 ## How it Works
