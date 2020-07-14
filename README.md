@@ -14,7 +14,8 @@
 ## Introduction
 
 A personal website, using Node.js, React.js and CSS, showcasing the information in regards to myself - Dawid Ciechowski - along
-with information about my projects, skills and contact information. 
+with information about my projects, skills and contact information. Personally, I do not have any previous experience with React,
+hence the website may not be fully polished. 
 
 ### IMPORTANT!
 
